@@ -18,14 +18,15 @@ Background: movies have been added to database
   | The Incredibles         | PG     | 5-Nov-2004   |
   | Raiders of the Lost Ark | PG     | 12-Jun-1981  |
   | Chicken Run             | G      | 21-Jun-2000  |
+  | Adult Movie             | NC-17  | 31-Oct-2013  |
 
   And I am on the RottenPotatoes home page
 
 Scenario: sort movies alphabetically
   When I follow "Movie Title"
-  # your steps here
+  Then I should see "Aladdin" before "Chocolat"
 
 Scenario: sort movies in increasing order of release date
   When I follow "Release Date"
-  # your steps here
+  Then I should see "When Harry Met Sally" before "The Incredibles"
 
